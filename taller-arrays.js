@@ -51,3 +51,58 @@ if (validarContraseña(contraseña)){
         * números`);
 }
 
+/*
+Ejercicio 3: Buscar Producto en Inventario
+- Sistema de gestión de inventario.
+Crea una función buscarProducto(nombre, inventario) que retorne el producto si existe, o null si no. El
+inventario debería estar PREDEFINIDO
+ejemplo:
+const inventario = [
+{ nombre: "Camisa", precio: 20 },
+{ nombre: "Zapatos", precio: 50 }
+];*/
+
+const invetario = [
+    {nombre:"Camisa", precio:10000},
+    {nombre:"Zapatos", precio:30000},
+    {nombre:"Sombrero", precio:50000},
+    {nombre:"Corbata", precio:10000}
+]
+function buscarProducto(nombre, inventario){
+    let producto = null;
+    for (const elemento of inventario) {
+        let encontrado = false;
+        if (elemento.nombre.toLowerCase().includes(nombre.toLowerCase())){
+            encontrado = true;
+        }
+        if (encontrado){
+            producto = elemento
+        }
+    }
+    return producto;
+}
+
+let consulta = prompt("Ingrese el producto que quiere buscar: ");
+console.log(buscarProducto(consulta, invetario));
+
+/*
+Ejercicio 4: Calcular Promedio de Notas
+- Plataforma educativa.
+Crea una función calcularPromedio(notas) que reciba un array de notas dado por el usuario
+(separadas por comas) y retorne el promedio (redondeado a 2 decimales).
+*/
+let notas = []
+function calcularPromedio(notas){
+    let suma = 0;
+    for (const nota of notas) {
+        suma = suma + nota;
+    }
+    return (suma/notas.length).toFixed(2);
+}
+let index = 0;
+let cantidad = prompt("Ingrese la cantidad de notas: ");
+while (index<cantidad) {
+    notas.push(parseInt(prompt("Ingrese una nota: ")));
+    index++;
+}
+console.log("El promedio de sus notas es: ",calcularPromedio(notas));
