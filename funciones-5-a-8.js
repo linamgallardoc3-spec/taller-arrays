@@ -42,3 +42,30 @@ export function retirarDinero (saldo, monto){
         console.log(`Operacion exitosa \n Su nuevo saldo es: ${saldo}`);
     };
 };
+
+// Ejercicio 8: Cambio de Moneda
+// -App de viajes.
+// Crea una función convertirMoneda(monto, monedaDestino) que convierta de pesos a USD o EUR,
+// pedir al usuario monto en COP y la moneda con la que desea hacer la converción.
+
+export function convertirMoneda (monto, monedaDestino){
+    let pesoDolar = 4000;
+    let pesoEuro = 4500;
+    
+    switch (monedaDestino) {
+        case 1:
+            console.log(`Cambio de moneda es a USD \n 1 dolar = ${pesoDolar}`);
+            let dolar = monto / pesoDolar;
+            console.log(`Su saldo en dolares es: ${dolar}`);
+            break;
+        case 2:
+            console.log(`Cambio de moneda es a EUR \n 1 Euro = ${pesoEuro}`);
+            let euro = monto / pesoEuro;
+            console.log(`Su saldo en euros es: ${euro}`);
+            break;
+    
+        default:
+            console.log("Opcion invalida intentelo nuevamente");
+            break;
+    }
+};
