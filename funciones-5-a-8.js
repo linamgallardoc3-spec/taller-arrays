@@ -26,3 +26,19 @@ export function contarPalabras(texto){
     return console.log(`El texto "${texto}" contiene: ${contador} palabras`);
 
 };
+
+// Ejercicio 7: Simulador de Cajero Automático
+// -App bancaria.
+// Crea una función retirarDinero(saldo, monto) que:
+// Pide al usuario su saldo actual y el monto a retirar.
+// Muestra el nuevo saldo o "Fondos insuficientes
+
+export function retirarDinero (saldo, monto){
+    console.log(`usted tenia: ${saldo}`);
+    if (monto > saldo) {
+        console.log(`Fondos insuficientes \n su saldo actual es: ${saldo}`);
+    } else {
+        saldo = saldo - monto;
+        console.log(`Operacion exitosa \n Su nuevo saldo es: ${saldo}`);
+    };
+};

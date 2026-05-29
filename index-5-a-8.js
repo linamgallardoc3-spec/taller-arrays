@@ -5,7 +5,7 @@
 // cual será dada por el usuario, es decir, si el usuario escribe 18, debería decirle que personas de la lsita
 const prompt = require('prompt-sync')();
 
-const { filtrarUsuarios, contarPalabras } = require("./funciones-5-a-8");
+const { filtrarUsuarios, contarPalabras, retirarDinero } = require("./funciones-5-a-8");
 
 // cumplen con tener más de 18 
 let usuarios = [
@@ -26,3 +26,10 @@ filtrarUsuarios(usuarios, edadMinima);
 
 let palabra = prompt("ingrese una texto breve: ");
 contarPalabras(palabra);
+
+//ejercicio 7
+
+let saldoActual = 400000;
+console.log(`Su saldo es: ${saldoActual}`)
+let saldoRetirar = prompt(`"Ingrese el monto a retirar: `)
+retirarDinero(saldoActual, saldoRetirar)
