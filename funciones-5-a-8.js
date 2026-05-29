@@ -11,3 +11,18 @@ export function filtrarUsuarios (usuarios, edadMinima){
         }
     }
 }
+
+// Ejercicio 6: Contador de Palabras
+// -Editor de texto.
+// Crea una función contarPalabras(texto) que retorne el número de palabras en un string (separadas por
+// espacios).
+export function contarPalabras(texto){
+    let contador = 1;
+    for(let i = 0; i < texto.length; i++){
+        if(texto[i] == " " && texto[i + 1] != " " ){
+            contador++;
+        };
+    }
+    return console.log(`El texto "${texto}" contiene: ${contador} palabras`);
+
+};
