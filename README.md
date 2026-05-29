@@ -7,3 +7,4 @@ Bucles (for, while).
 Arrays y métodos básicos.
 
 Lina Gallardo Corrales
+Jose Ramiro Diaz Aguirre
